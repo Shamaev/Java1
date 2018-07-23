@@ -108,16 +108,11 @@ class TicTacToe {
         for (int i = 0; i < SIZE; i++) {
             int v = 0;
             int g = 0;
-<<<<<<< HEAD
 
-=======
-            
->>>>>>> 72d9c61a14faea13df787a9bc2f8461e9d98d72b
             for (int j = 0; j < SIZE; j++) {
                 if (map[i][j] == a) v++;
                 if (map[j][i] == a) g++;
 
-<<<<<<< HEAD
 <<<<<<< HEAD
                 if (i == j && map[i][j] == a) d1++;
                 if (i + j == 2 && map[j][i] == a) d2++;
@@ -130,13 +125,6 @@ class TicTacToe {
             if (g == 3) return true;
             
 
-=======
-                if (i == j || map[i][j] == a) d1++;
-                if (i + j == 2 || map[i][j] == a) d2++;
-            }
-            if (v == 3) return true;
-            if (g == 3) return true;
->>>>>>> 72d9c61a14faea13df787a9bc2f8461e9d98d72b
         }
         if (d1 == 3) return true;
         if (d2 == 3) return true;
