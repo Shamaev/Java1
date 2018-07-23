@@ -113,8 +113,13 @@ class TicTacToe {
                 if (map[i][j] == a) v++;
                 if (map[j][i] == a) g++;
 
+<<<<<<< HEAD
                 if (i == j && map[i][j] == a) d1++;
                 if (i + j == 2 && map[j][i] == a) d2++;
+=======
+//                if (i == j || map[i][j] == a) d1++;
+//                if (i + j == 2 || map[i][j] == a) d2++;
+>>>>>>> 63a70343df0accc0fe2ddc34eddb882c17d63ce6
             }
             if (v == 3) return true;
             if (g == 3) return true;
