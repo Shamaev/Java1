@@ -103,27 +103,24 @@ class TicTacToe {
     }
 
     boolean komb(char a){
+        int d1 = 0;
+        int d2 = 0;
         for (int i = 0; i < SIZE; i++) {
             int v = 0;
             int g = 0;
-            int d1 = 0;
-            int d2 = 0;
+            
             for (int j = 0; j < SIZE; j++) {
                 if (map[i][j] == a) v++;
                 if (map[j][i] == a) g++;
 
-//                if (i == j || map[i][j] == a) d1++;
-//                if (i + j == 2 || map[i][j] == a) d2++;
+                if (i == j || map[i][j] == a) d1++;
+                if (i + j == 2 || map[i][j] == a) d2++;
             }
             if (v == 3) return true;
             if (g == 3) return true;
-//            if (d1 == 3) return true;
-//            if (d2 == 3) return true;
-
-//            if(map[0][0] == a && map[1][1] == a && map[2][2] == a) return true;
-//            if(map[2][0] == a && map[1][1] == a && map[0][2] == a) return true;
-
         }
+        if (d1 == 3) return true;
+        if (d2 == 3) return true;
         return false;
     }
 
